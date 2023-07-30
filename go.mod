@@ -1,4 +1,4 @@
-module github.com/divrhino/divrhino-trivia
+module github.com/au79stein/divrhino-trivia
 
 go 1.19
 
