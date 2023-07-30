@@ -4,9 +4,10 @@ services:
   web:
     build: .
     env_file:
+      # use .env file to hold postgres info
       - .env
     ports:
-      - "3000:3000"
+      - "8080:3000"
     volumes:
       - .:/usr/src/app
     command: air ./cmd/main.go -b 0.0.0.0
@@ -18,6 +19,7 @@ services:
       - POSTGRES_DB=${DB_NAME}
     ports:
       - "5432:5432"
+    # where do we want to persist this data
     volumes:
       - postgres-db:/var/lib/postgresql/data
 

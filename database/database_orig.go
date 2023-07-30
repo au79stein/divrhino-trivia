@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/au79stein/divrhino-trivia/models"
+	"github.com/divrhino/divrhino-trivia/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -19,7 +19,7 @@ var DB Dbinstance
 
 func ConnectDb() {
 	dsn := fmt.Sprintf(
-		"host=db user=%s password=%s dbname=%s port=5432 sslmode=disable TimeZone=America/New_York",
+		"host=db user=%s password=%s dbname=%s port=5432 sslmode=disable TimeZone=Asia/Shanghai",
 		os.Getenv("DB_USER"),
 		os.Getenv("DB_PASSWORD"),
 		os.Getenv("DB_NAME"),
